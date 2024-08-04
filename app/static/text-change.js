@@ -1,4 +1,4 @@
-const texts = ["companion.", "assistant", "helper","guide"];
+const texts = ["Health companion", "Health assistant", "Healthcare helper","Healthcare guide"];
 let currentIndex = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -13,9 +13,4 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(changeText, 3000);
 });
 
-// function sayHello() {
-//   console.log('Hello, World!');
-// }
 
-// // Call sayHello every 2 seconds
-// setInterval(sayHello, 2000); // 2000 milliseconds = 2 seconds

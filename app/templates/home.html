@@ -28,14 +28,30 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link href="../static/dashboard.css" rel="stylesheet"/>
 
     <style>
+      @font-face {
+        font-family: "Gilroy";
+        src: url("../static/fonts/Gilroy-Light.woff2") format("woff2");
+        font-weight: normal;
+        font-style: light;
+      }
+   
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: "Ubuntu", sans-serif;
       }
+      .your-class {
+        font-family: "Gilroy", sans-serif;
+        font-weight: light;
+      }
+      .main-class {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 100;
+      }
+
       body {
         overflow-x: hidden;
       }
@@ -78,8 +94,11 @@
     <link rel="stylesheet" href="../static/home.css" />
     <link rel="stylesheet" href="../static/button.css" />
     <link rel="stylesheet" href="../static/video.css" />
+    <link rel="stylesheet" href="../static/card.css" />
+    <link rel="stylesheet" href="../static/footer.css" />
   </head>
-  <body style="background-color: #faf9f6" class="position-relative">
+
+  <body style="background: #f0fff0" class="position-relative main-class">
     <div id="cursorelement" class="position-absolute bg-dark"></div>
 
     {% include 'nav.html' %}
@@ -103,7 +122,7 @@
       </ul>
     </div>
     <!--header section    ...............-->
-    <div id="head" class="">
+    <div id="head" class=" ">
       <header class="heading m-0 row">
         <div class="col-12 p-0 banner position-relative">
           <div class="swiper">
@@ -119,21 +138,107 @@
             <div class="swiper-pagination"></div>
 
             <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev " style="color:#faf9f6"></div>
-            <div class="swiper-button-next" style="color:#faf9f6"></div>
+            <div class="swiper-button-prev" style="color: #faf9f6"></div>
+            <div class="swiper-button-next" style="color: #faf9f6"></div>
 
             <!-- If we need scrollbar -->
           </div>
         </div>
-        <div class="col-12 p-0 position-absolute banner-gradient"></div>
+        <div class="col-12 p-0 position-absolute banner-gradient">
+          <div
+            class="maintag px-5 mx-5 py-5 w-50 d-flex justify-content-start align-items-center text-light your-class"
+          >
+            <p class="lh-1" style="color: white">
+              Your Virtual&nbsp;<span class="textchange" style="color: #0e6655">
+                Healthcare Companion</span
+              ><br />
+              for a Healthier<br />
+              Tomorrow
+            </p>
+          </div>
+        </div>
+        
       </header>
-      
-
+      <div class="w-100 col-12 mt-4 d-flex justify-content-center">
+        {% include 'button.html' %}
+      </div>
     </div>
+    <hr class="mx-5 mt-0 pt-0" />
 
-    <div class="container w-100 h-100">
-      <div class="row px-4"></div>
+    <div class="container w-100 pb-5">
+      <div class="row px-md-5 px-2">
+        <h1 class="col-12 gap-1 display-2 your-class display-4">
+          Explore Our Services
+        </h1>
+        <div class="col-6 col-md-3 mt-3 mt-md-5 cardone">
+          <a href="#"
+            >{% include 'cardservice.html' %}
+            <div></div
+          ></a>
+        </div>
+        <div class="col-6 col-md-3 mt-3 mt-md-5 cardone">
+          <a href="#">{% include 'cardservice.html' %}</a>
+        </div>
+        <div class="col-6 col-md-3 mt-3 mt-md-5 cardone">
+          <a href="#">{% include 'cardservice.html' %}</a>
+        </div>
+        <div class="col-6 col-md-3 mt-3 mt-md-5 cardone">
+          <a href="#">{% include 'cardservice.html' %}</a>
+        </div>
+        <div class="col-6 col-md-3 mt-3 mt-md-5 cardone">
+          <a href="#">{% include 'cardservice.html' %}</a>
+        </div>
+        <div class="col-6 col-md-3 mt-3 mt-md-5 cardone">
+          <a href="#">{% include 'cardservice.html' %}</a>
+        </div>
+        <div class="col-6 col-md-3 mt-3 mt-md-5 cardone">
+          <a href="#">{% include 'cardservice.html' %}</a>
+        </div>
+      </div>
     </div>
+    <div class="steps-base">
+      <div class="row gap-4 steps bg-white shadow p-5">
+        <div class="col-12 d-flex justify-content-between">
+          <h4 class="ps-4 title-step">User Guide</h4>
+        </div>
+
+        <div class="col-12 p-2 pt-0">
+          <div class="step m-3">
+            <h6>Step1</h6>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est saepe
+              commodi vel. Excepturi veritatis, quae deserunt voluptatibus harum
+              ipsam minus assumenda neque, laudantium saepe laboriosam aliquid
+              veniam labore animi ullam.
+            </p>
+          </div>
+          <div class="step m-3">
+            <h6>Step2</h6>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est saepe
+              commodi vel. Excepturi veritatis, quae deserunt voluptatibus harum
+              ipsam minus assumenda neque, laudantium saepe laboriosam aliquid
+              veniam labore animi ullam.
+            </p>
+          </div>
+          <div class="step m-3">
+            <h6>Step3</h6>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est saepe
+              commodi vel. Excepturi veritatis, quae deserunt voluptatibus harum
+              ipsam minus assumenda neque, laudantium saepe laboriosam aliquid
+              veniam labore animi ullam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    {% include 'footer.html' %}
+
+    
+    
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -144,7 +249,7 @@
     <script src="../static/nav.js"></script>
     <script src="../static/text-change.js"></script>
     <script src="../static/main.js"></script>
-    <script src="../static/robo.js"></script>
+    <!-- <script src="../static/popup.js"></script> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script
@@ -152,9 +257,31 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.to(".cardone", {
+        scrollTrigger: {
+          trigger: ".cardone",
+          start: "top 80%", // Animation starts when the top of .cardser reaches 80% of the viewport height from the top
+          end: "top 70%", // Animation ends when the top of .cardser reaches 50% of the viewport height from the top
+          scrub: true, // Smooth scrubbing effect
+        },
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+      });
+    </script>
+
+
+
   </body>
 </html>

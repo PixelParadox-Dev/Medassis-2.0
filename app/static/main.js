@@ -94,8 +94,11 @@ const swiper = new Swiper(".swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  autoplay: {
+    delay: 3000, // Delay between transitions in milliseconds
+    disableOnInteraction: false, // Keep autoplay enabled after user interactions
+  },
 
   // And if we need scrollbar
-  
 });
 
